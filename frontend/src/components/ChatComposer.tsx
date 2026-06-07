@@ -32,9 +32,9 @@ export default function ChatComposer({ disabled, onSubmit }: Props) {
   }
 
   return (
-    <div className="border-t border-[var(--color-border)] bg-[var(--color-surface)]">
+    <div className="border-t border-blue-200 bg-gradient-to-r from-blue-50 to-yellow-50 shadow-lg">
       <div className="mx-auto max-w-3xl px-6 py-4">
-        <div className="flex items-end gap-2 rounded-xl border border-[var(--color-border)] bg-[var(--color-bg)] focus-within:border-[var(--color-accent)] transition-colors px-3 py-2">
+        <div className="flex items-end gap-3 rounded-xl border-2 border-blue-300 bg-white focus-within:border-blue-500 focus-within:shadow-lg transition-all px-4 py-3">
           <textarea
             ref={taRef}
             value={value}
@@ -43,19 +43,22 @@ export default function ChatComposer({ disabled, onSubmit }: Props) {
               resize();
             }}
             onKeyDown={onKeyDown}
-            placeholder="Ask something…"
+            placeholder="Ask me anything about your data…"
             rows={1}
-            className="flex-1 resize-none bg-transparent outline-none text-sm leading-relaxed py-1.5 placeholder:text-[var(--color-muted)]"
+            className="flex-1 resize-none bg-transparent outline-none text-sm leading-relaxed py-1.5 placeholder:text-gray-400 text-gray-800"
           />
           <button
             type="button"
             onClick={submit}
             disabled={disabled || value.trim().length === 0}
-            className="shrink-0 rounded-lg bg-[var(--color-accent)] text-white text-sm font-medium px-3.5 py-1.5 hover:bg-[var(--color-accent-hover)] disabled:bg-[var(--color-border)] disabled:text-[var(--color-muted)] disabled:cursor-not-allowed transition-colors"
+            className="shrink-0 rounded-lg bg-gradient-to-r from-blue-500 to-blue-600 text-white text-sm font-semibold px-4 py-2.5 hover:from-blue-600 hover:to-blue-700 disabled:from-gray-300 disabled:to-gray-400 disabled:text-gray-500 disabled:cursor-not-allowed transition-all hover:shadow-md active:scale-95"
           >
-            Send
+            ✨ Send
           </button>
         </div>
+        <p className="text-xs text-gray-500 mt-2 text-center">
+          Press Enter to send, Shift+Enter for new line
+        </p>
       </div>
     </div>
   );
