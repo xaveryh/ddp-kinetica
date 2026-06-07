@@ -1,9 +1,9 @@
 import { NavLink, Outlet } from "react-router-dom";
 
 const NAV = [
-  { to: "/", label: "💬 Chat", end: true },
-  { to: "/visualisations", label: "📊 Visualisations", end: false },
-  { to: "/predictions", label: "🔮 Predictions", end: false },
+  { to: "/", label: "Chat", end: true },
+  { to: "/visualisations", label: "Visualisations", end: false },
+  { to: "/predictions", label: "Predictions", end: false },
 ];
 
 export default function Layout() {
@@ -12,7 +12,7 @@ export default function Layout() {
       <aside className="w-56 shrink-0 border-r-2 border-blue-200 bg-gradient-to-b from-white to-blue-50 flex flex-col shadow-sm">
         <div className="px-5 py-6 border-b-2 border-blue-200 bg-gradient-to-r from-blue-500 to-blue-600">
           <h1 className="text-white font-bold text-lg flex items-center gap-2">
-            <span>🚀</span> ArrowDB
+            ArrowDB
           </h1>
         </div>
         <nav className="flex flex-col p-3 gap-1">

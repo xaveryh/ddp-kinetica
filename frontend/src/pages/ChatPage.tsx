@@ -5,22 +5,18 @@ import { postChat, type Message } from "../lib/api";
 
 const guides = [
   {
-    icon: "📊",
     title: "Analyze Data",
     description: "Ask questions about your data and get instant insights",
   },
   {
-    icon: "🔍",
     title: "Search Records",
     description: "Find specific information in your database",
   },
   {
-    icon: "📈",
     title: "Get Trends",
     description: "Discover patterns and trends in your data",
   },
   {
-    icon: "💡",
     title: "Smart Suggestions",
     description: "Receive intelligent recommendations and advice",
   },
@@ -81,9 +77,7 @@ export default function ChatPage() {
                 style={{ animationDelay: `${idx * 100}ms` }}
               >
                 <div className="flex items-start gap-3">
-                  <div className="guide-icon bg-gradient-to-br from-blue-100 to-yellow-100 group-hover:from-blue-200 group-hover:to-yellow-200 transition-colors">
-                    {guide.icon}
-                  </div>
+                  <div className="guide-icon bg-gradient-to-br from-blue-100 to-yellow-100 group-hover:from-blue-200 group-hover:to-yellow-200 transition-colors"></div>
                   <div className="flex-1">
                     <h3 className="font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">
                       {guide.title}
@@ -99,7 +93,7 @@ export default function ChatPage() {
 
           <div className="text-center">
             <p className="text-sm text-gray-500">
-              💡 <span className="font-medium">Pro tip:</span> Be specific with your questions for better results
+              <span className="font-medium">Pro tip:</span> Be specific with your questions for better results
             </p>
           </div>
         </div>

@@ -53,7 +53,7 @@ export default function ChatComposer({ disabled, onSubmit }: Props) {
             disabled={disabled || value.trim().length === 0}
             className="shrink-0 rounded-lg bg-gradient-to-r from-blue-500 to-blue-600 text-white text-sm font-semibold px-4 py-2.5 hover:from-blue-600 hover:to-blue-700 disabled:from-gray-300 disabled:to-gray-400 disabled:text-gray-500 disabled:cursor-not-allowed transition-all hover:shadow-md active:scale-95"
           >
-            ✨ Send
+            Send
           </button>
         </div>
         <p className="text-xs text-gray-500 mt-2 text-center">
