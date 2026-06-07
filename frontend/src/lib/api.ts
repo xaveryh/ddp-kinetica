@@ -31,6 +31,6 @@ export type Message = {
 export function postChat(content: string): Promise<Message> {
   return api<Message>("/chat/", {
     method: "POST",
-    body: JSON.stringify({ content }),
+    body: JSON.stringify({ prompt: content }),
   });
 }

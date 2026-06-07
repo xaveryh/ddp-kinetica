@@ -1,10 +1,10 @@
 from flask import Flask
 
-from . import chat, conversations, health, predictions, visualisations
+from . import chatbot, conversations, health, predictions, visualisations
 
 _BLUEPRINTS = (
     health.bp,
-    chat.bp,
+    chatbot.bp,
     conversations.bp,
     visualisations.bp,
     predictions.bp,
